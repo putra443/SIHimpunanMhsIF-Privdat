@@ -1,0 +1,117 @@
+
+.top{
+    display: flex;
+}
+.middle{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+/* CSS Isi Content */
+.imgTop{
+    width: 4%;
+    height: 4%;
+    margin: 1rem 0.5rem 1rem 1rem;
+}
+.imgIF{
+    width: 10%;
+    height: 10%;
+    margin: 2rem 0.5rem 1rem 2rem;
+    
+}
+.aheader{
+    color: black;
+}
+
+.containerMiddle{
+    margin-left: 5rem;
+}
+/* CSS Link dan Text Content */
+.unpar{
+    margin-top: 0.1rem;
+}
+
+.middle h1{
+    margin-top: 0.5rem;
+}
+.middle button{
+    margin-bottom: 1.5rem;
+}
+.link{
+    display: flex;
+    align-items: flex-end;
+    margin: 1rem 1rem 1.25rem 62rem;
+}
+a{
+    margin: 1rem;
+}
+.login{
+    float: center;
+    margin: 20rem;
+}
+
+body{
+    background-image: url(../assets/images/blur25LoginB.jpg );
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    
+}
+.loginForm{
+    width: 30%;
+    height: 150%;
+    border: solid 0.1rem rgb(0, 0, 0);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+#name{
+    width: 94%;
+    padding: 0.7rem;
+    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh black;
+    border: hidden;
+    border-radius: 0.5rem;
+}
+
+#button{
+    margin-left: 40%;
+    width: 20%;
+    padding: 1vh;
+    background-color: rgb(26, 60, 145);
+    color: white;
+    border: hidden;
+    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh black;
+    border-radius: 0.5rem;
+}
+
+.loginAlert{
+    text-align: center;
+    color: red;
+    background-color: lightgreen;
+    margin-bottom: 20px;
+    border-color: lightgreen;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+

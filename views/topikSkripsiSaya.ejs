@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/topikSkripsiSaya.css">
+    <title>Topik Saya</title>
+</head>
+<body>
+    <header>
+        <%- include('./layout/head.ejs') %>
+    </header>
+    <div class="skripsisSayaContainer">
+        <div class="skripsiSayaTop">
+            <a href="http://localhost:8080/homeAdmin">
+                <img src="assets/images/leftArrow.png" alt="">
+            </a>
+            <h3>Topik Skripsi Saya</h3>
+
+            <p class="dueDateUnggah">Due/05/2022</p>
+        </div>
+        <br>
+        <div class="skripsiSayaMain">
+                <div class="innerMain">
+                    <% for(const row of results) { %> 
+                    <a class="wrapper">
+                        <div class="innerMain1">
+                            <div class="icon">
+                                <img src="assets/images/bookIcon.jpg" class="bookIcon" alt="">
+                            </div>
+                            <div class="textContent">
+                                <form action="/skripsiSaya" method="post">
+                                <h3><%= row.judulTopik %> </h3>
+                                <p><%= row.idTopik %></p>
+                                <p><%= row.peminatan %></p>
+                            </div>
+                            <div class="editButton">
+                                <div>
+                                    <p>Status: <b><%= row.statusSkripsi %></b> </p>
+                                        <select name="gantiStat">
+                                            <option selected value="<%= row.statusSkripsi %>"> </option>
+                                            <option value="OPEN" name="OK">OPEN</option>
+                                            <option value="CLOSE" name="NO">CLOSE</option>
+                                            <option value="TAKEN" name="INQ">TAKEN</option>
+                                        </select>
+                                        <br>
+                                        <input type="hidden" name ="noTopik" value="<%= row.idTopik %>">
+                                        <input type="submit" name="updateStat" onclick="redirect" value="Ganti Status">
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %> 
+                </div>
+        </div>
+    
+
+    </div>
+
+    <footer>
+        <%- include('./layout/footer.ejs') %>
+    </footer>
+</body>
+</html>

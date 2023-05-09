@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/laporanDaftarTopik.css">
+    <title>Daftar Topik Skripsi</title>
+</head>
+
+<body>
+            <h3>Daftar Topik Skripsi</h3>
+            <p class="dueDateUnggah">Due/05/2022</p>
+        </div>
+        <br>
+        <div class="skripsiSayaMain">
+            <div class="innerMain">
+                <a class="wrapper">
+                    <div class="innerMain1">
+                        <div class="textContent">
+                            <% for(const row of results) { %> 
+                            <table>
+                                <tr>
+                                    <th>ID Topik</th>
+                                    <th>Judul Topik</th>
+                                    <th>Peminatan</th>
+                                    <th>Tipe</th>
+                                    <th>No Dosen</th>
+                                    <th>Tahun Ajaran</th>
+                                    <th>Status Skripsi</th>
+                                </tr>
+
+                                <tr>
+                                    <td><%= row.idTopik %></td>
+                                    <td><%= row.judulTopik %></td>
+                                    <td><%= row.peminatan %></td>
+                                    <td><%= row.tipe %></td>
+                                    <td><%= row.noDosen %></td>
+                                    <td><%= row.tahunAjaran %></td>
+                                    <td><%= row.statusSkripsi %></td>
+                                </tr>
+                            </table>
+                            <% } %> 
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

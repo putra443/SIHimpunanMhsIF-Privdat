@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/kelolaAkunLanjutan.css">
+    <title>Add User</title>
+</head>
+<body>
+    <body>
+
+        <header>
+            <%- include('./layout/head.ejs') %>
+        </header>
+    
+        <div class="kelolaAkunContainer">
+            <div class="kelolaAkunTop">
+                <a href="http://localhost:8080/kelolaAkun">
+                    <img src="assets/images/leftArrow.png" alt="">
+                </a>
+                <h3>Kelola Akun</h3>
+            </div>
+    
+            <br>
+    
+            <div class="kelolaAkunMain">
+                    <div class="innerMain">
+                            <div class="innerMain1">
+                                <form action="/addAkun" method="post">
+                                    <fieldset>
+                                        <h3>Lengkapi informasi akun yang ingin ditambahkan</h3>
+                                        <label for=""> Name</label>
+                                        <input type="text" class="gantiNama" name="gantiNama" required>
+                                        <label for=""> noDosen</label>
+                                        <input type="text" class="gantiNoDosen" name="gantiNoDosen" required>
+                                        <label for=""> username</label>
+                                        <input type="text" class="gantiUsername" name="gantiUsername" required>
+                                        <label for=""> password</label>
+                                        <input type="password" class="gantiPassword" name="gantiPassword" required>
+                                        <label for=""> Roles</label>
+                                        <select name="Roles" id="">
+                                            <option value="Admin">Admin</option>
+                                            <option value="Dosen">Dosen</option>
+                                        </select>
+                                        <input type="submit" id="gantiNama" value="submit">
+                                    </fieldset>
+                                </form>
+                            </div>
+                    </div>
+            </div>
+        
+    
+        </div>
+    
+        <footer>
+            <%- include('./layout/footer.ejs') %>
+        </footer>
+        
+    </body>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unggah Topik</title>
+    <link rel="stylesheet" href="assets/unggahTopik.css">
+</head>
+<body>
+    <header>
+        <%- include('./layout/head.ejs') %>
+    </header>
+
+    <div class="unggahContainer">
+
+            <div class="unggahTop">
+                <a href="http://localhost:8080/homeAdmin">
+                    <img src="assets/images/leftArrow.png" alt="">
+                </a>
+                <h3>Unggah Topik Skripsi</h3>
+    
+                <p class="dueDateUnggah">Due/05/2022</p>
+            </div>
+
+        <br>
+        <div class="unggahMain">
+            
+            <div class="formUnggah">
+                <div class="alert">
+                    <%=   %> 
+                </div>
+                <form method = POST action="/unggahTopik" id = "tambahTopik" enctype="multipart/form-data">
+                    <fieldset>
+                        <label for="Judul" class="judul">Judul</label>
+                        <input type="text" name = "judulT" id ="judulT" required>
+                        <label for="bidangPeminatan">Bidang Peminatan</label>
+                        <select name="peminatan" id="" required>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Computing Science">Computing Science</option>
+                        </select>
+                        <label for="tipe">Tipe Skripsi</label>
+                        <select name="tipeSkripsi" id="" required>
+                            <option value="Bintang">*</option>
+                            <option value="Reguler">Reguler</option>
+                        </select>
+                        <label for="periodeT">Tahun Ajaran</label required>
+                        <select name="periode" id="">
+                            <option value="2020/2021" name="a">2020/2021</option>
+                            <option value="2021/2022"name="a">2021/2022</option>
+                        </select>
+                        <label for="UploadFile">Upload File</label>
+                        <input type="file" name="fileTopik" required>
+                        <br>
+                        <input type="submit" class="submitSkripsi" onclick="cekInputJudul()" readonly>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script lang="javascript">
+        function cekInputJudul() {
+            var cekJudul = document.getElementById("judulT").value;
+            }
+            if (cekJudul != ""){
+                alert("Berhasil Mengunggah Topik!");
+        }
+        else{
+            alert("Input tidak boleh kosong!")
+        }
+    
+        
+    </script>
+    <footer>
+        <%- include('./layout/footer.ejs') %>
+    </footer>
+
+</body>
+</html>

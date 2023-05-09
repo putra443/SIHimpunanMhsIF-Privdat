@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+}
+.topContent{
+    align-items: center;
+    text-align: center;
+}
+.submit{
+    border-radius: 15%;
+    background-color: darkblue ;
+}
+/* CSS Content Main */
+.innerContent{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* CSS Container left dan right */
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: darkblue;
+    border-radius: 1rem;
+    margin: 1rem 1rem 1rem 0rem;
+    padding: 5rem 1rem 5rem 1rem;
+    width: 30%;
+    height: 50%;
+}
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0rem 1rem 1rem 0rem;
+    width: 50%;
+    height: 80%;
+
+}
+/* CSS Left Container content */
+.topLeftContainer{
+    align-items: center;
+    text-align: center;
+}
+.topLeftContainer p{
+    color: white;
+}
+.logoAdmin{
+    width: 20%;
+    height: 20%;
+    border-radius: 10rem;
+}
+
+.logoUnparHome{
+    display: block;
+    width: 20%;
+    height: 20%;
+}
+.bottomLeftContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.bottomLeftContainer a{
+    color: white;
+}
+.innerRightContainer1{
+    background-color: lightgray;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.innerRightContainer1:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+.innerRightContainer2{
+    background-color: lightgray;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.innerRightContainer2:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+
+.innerRightContainer3{
+    background-color: lightgray;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.innerRightContainer3:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+
+.innerRightContainer4{
+    background-color: lightgray;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.innerRightContainer4:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+
+/* CSS Gambar Icon Home */
+.bookIcon{
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+}
+.listIcon{
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+}
+.adminIcon{
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+}
+.akunSaya{
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+}
+
+/* CSS Wrapper */
+.wrapper{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+

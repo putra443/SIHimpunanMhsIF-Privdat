@@ -1,0 +1,246 @@
+.kelolaAkunContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS Bagian Modal Edit Akun */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    margin-top: 1rem;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* CSS Bagian Container skripsiSayaTop */
+
+.kelolaAkunTop{
+    padding: 1rem;
+    margin: 2rem 1rem 0.5rem 1rem;
+    border: solid darkblue 0.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    row-gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.kelolaAkunTop img{
+    width: 50%;
+    height: 50%;
+}
+.kelolaAkunTop a{
+    width: 10%;
+    height: 10%;
+}
+
+.kelolaAkunTop  img:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+.kelolaAkunTop .editAkunButton{
+    margin-left: 30%;
+    height: 50%;
+}
+.kelolaAkunTop h3{
+    margin-left: 35%;
+}
+
+/* CSS Bagian Container skripsiSayaMain */
+
+.kelolaAkunMain{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.kelolaAkunMain a{
+    color: black;
+    text-decoration: none;
+}
+
+label{
+    color: white;
+    margin: 1rem 0rem 1rem 0rem;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: solid 0.1rem white;
+}
+
+.innerMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    margin: 0rem 1rem 1rem 0rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Bagian inner1 Container skripsiSayaMain */
+
+.innerMain1{
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 50rem;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+.innerMain1:hover{
+    transform: translateY(0.25rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.75)
+}
+
+.adminIcon{
+    margin-left: 5%;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+}
+
+.innerMain1 h3{
+    padding: 1rem;
+    text-align: start;
+    justify-content: start;
+}
+
+.containerButton{
+    height: 50%;
+    margin-left: 2rem;
+}
+#buttonEdit{
+    display: flex;
+    border-radius: 0.5rem;
+    padding: 2%;
+    height: 5rem;
+    width: 5rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonEdit:hover{
+    transform: translateY(0.10rem);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5)
+}
+
+fieldset{
+    margin: 1rem;
+}
+
+.containerNama{
+    align-items: center;
+    text-align: center;
+    width: 10rem;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* CSS Container Info Akun */
+
+.tableInfo{
+    width: 100%;
+    justify-content: start;
+    text-align: start;
+}
+ th, td{
+    padding: 0.25rem;
+}
+
+.infoAkun{
+    display: flex;
+    flex-direction: column;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 0%;
+}
+
+.container1 h5{
+    margin: none;
+}
+
+.judulKelola{
+    margin-left: 50%;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper{
+    margin: 1rem;
+}
+
+/* css modal form container */
+.modal-container{
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-container button{
+    margin-top: 0.5rem;
+}
+.modal-container label{
+    color: black;
+}

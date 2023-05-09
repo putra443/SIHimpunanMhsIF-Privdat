@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/kelolaAkunLanjutan.css">
+    <title>kelolaAkunLanjutan</title>
+</head>
+<body>
+    <body>
+
+        <header>
+            <%- include('./layout/head.ejs') %>
+        </header>
+    
+        <div class="kelolaAkunContainer">
+            <div class="kelolaAkunTop">
+                <a href="http://localhost:8080/homeAdmin">
+                    <img src="assets/images/leftArrow.png" alt="">
+                </a>
+                <h3>Kelola Akun</h3>
+            </div>
+    
+            <br>
+    
+            <div class="kelolaAkunMain">
+                    <div class="innerMain">
+                            <div class="innerMain1">
+                                <form action="/kelolaAkunLanjutan" method="post">
+                                    <fieldset>
+                                        <h3>Masukan username akun yang ingin diganti</h3>
+                                        <input type="text" class="akunDiganti" name="akunGanti">
+                                        <label for="">Change Name</label>
+                                        <input type="text" class="gantiNama" name="gantiNama">
+                                        <label for="">Change numberID</label>
+                                        <input type="text" class="gantiNoDosen" name="gantiNoDosen">
+                                        <label for="">Change username</label>
+                                        <input type="text" class="gantiUsername" name="gantiUsername">
+                                        <label for="">Change password</label>
+                                        <input type="text" class="gantiPassword" name="gantiPassword">
+                                        <input type="submit" id="gantiNama" value="submit">
+                                    </fieldset>
+                                </form>
+                            </div>
+                    </div>
+            </div>
+        
+    
+        </div>
+    
+        <footer>
+            <%- include('./layout/footer.ejs') %>
+        </footer>
+        
+    </body>
+</body>
+</html>

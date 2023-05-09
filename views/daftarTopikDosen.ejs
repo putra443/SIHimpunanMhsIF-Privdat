@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/daftarTopik.css">
+    <title>Daftar Topik Skripsi</title>
+</head>
+<body>
+    <header>
+        <%- include('./layout/head.ejs') %>
+    </header>
+    <div class="skripsiSayaContainer">
+        <div class="skripsiSayaTop">
+            
+            <a href="http://localhost:8080/home">
+                <img src="assets/images/leftArrow.png" alt="">
+            </a>
+
+            <h3>Daftar Topik Skripsi</h3>
+            <p class="dueDateUnggah">Due/05/2022</p>
+
+            <div class="searchAkun">
+                <form method="GET" action="/daftarTopikDosen">
+                    <fieldset>
+                        <legend>Search by Name</legend>
+                        <input type="text" name="filter" value="<%= %>">
+                        <input type="submit" class="submitAkun" value="SEARCH">
+                    </fieldset>
+                </form>
+            </div>
+            
+        </div>
+        <br>
+        <div class="skripsiSayaMain">
+            <div class="innerMain">
+                <% for(const row of results) { %> 
+                <a class="wrapper">
+                    <div class="innerMain1">
+                        <div class="icon">
+                            <img src="assets/images/bookIcon.jpg" class="bookIcon" alt="">
+                        </div>
+                        <div class="textContent">
+                            <input type="hidden" name ="aTopik" value="<%= row.idTopik %>">
+                            <h3><%= row.judulTopik %></h3>
+                            <p>Nomor Topik : <%= row.idTopik %></p>
+                            <p>Bidang Peminatan : <%= row.peminatan %></p>
+                            <p>Tahun Ajaran : <%= row.tahunAjaran %></p>
+                            <p>Dosen Pengaju : <%= row.namaD %></p>
+                        </div>
+                        <div class="editButton">
+                            <div>
+                                <p>Status: <b><%= row.statusSkripsi %></b> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <button class="showKomen" onclick="myFunction()">Show Comments</button>
+                    <br><br>
+                    <div id="comments">
+                        <div class="innerComments">
+                            <div class="isiKomentar">
+                                <% for(const row of namaKomen) { %> 
+                                    <input type="hidden" name ="plisTopik" value="<%= row.idTopik %>">
+                                <div class="name">
+                                    <!-- Nama si Penkomen -->
+                                    <fieldset>
+                                        <h3>Nama : <%=row.namaD %></h3>
+                                    </fieldset>
+                                </div>
+                                <!-- isi komentarnya -->
+                                <fieldset>
+                                    <h5>Komentar : <%= row.komentar %></h5>
+                                </fieldset>
+                                <% } %> 
+                            </div>
+
+                            <div class="inputKomentar">
+                                <h3>Post A Comment</h3>
+                                <form action="/daftarTopikDosen2" method="post">
+                                    <textarea name="komentar" id="" cols="30" rows="10" placeholder="Masukkan comment.."></textarea>
+                                    <br>
+                                    <input type="hidden" name ="kTopik" value="<%= row.idTopik %>">
+                                    <input type="submit" name="" onclick="redirect" value="Submit Comment">
+                                </form>
+                            </div>
+
+                            <!-- Isi Comments -->
+                        </div>
+                    </div>
+                
+                </a>
+                <% } %> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <%- include('./layout/footer.ejs') %>
+    </footer>
+    
+</body>
+</html>

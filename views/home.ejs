@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/home.css">
+    <title>Review Topik Skripsi</title>
+</head>
+<body>
+    <header>
+        <%- include('./layout/head.ejs') %>
+    </header>
+    <br>
+    <div class="mainContent">
+        <!-- Div judul dan periode skripsi -->
+        <div class="topContent">
+            <h2>Topik Skripsi</h2>
+        </div>
+
+        <!-- Container content -->
+        <div class="innerContent">
+
+            <div class="leftContainer">
+
+                <div class="topLeftContainer">
+                    <img src="assets/images/adminIcon.jpg" class="logoAdmin" alt="profile">
+                    <!-- Diganti ejs nanti -->
+                    <p><%= nama %></p>
+                    <p><%= noID %></p>
+                    <p><%= idRole %></p>   
+                </div>
+                
+                <div class="bottomLeftContainer">
+                    <img src="assets/images/logoUnpar.png" class="logoUnparHome" alt="logoUnpar">
+                    <a class="" href="https://unpar.ac.id/">unpar.ac.id</a>
+                    <a class="" href="https://informatika.unpar.ac.id/">informatika.unpar.ac.id</a>
+                </div>
+
+            </div>
+
+            <div class="rightContainer">
+                <a class="wrapper" href="http://localhost:8080/unggahTopik">
+                    <div class="innerRightContainer1">
+                        <img src="assets/images/bookIcon.jpg" class="bookIcon" alt="">
+                        <h3>Unggah Topik Skripsi</h3>
+                    </div>
+                </a>
+
+                <a class="wrapper" href="http://localhost:8080/skripsiSaya">
+                    <div class="innerRightContainer2">
+                        <img src="assets/images/adminIcon.jpg" class="akunSaya" alt="">
+                        <h3>Topik Skripsi Saya</h3>
+                    </div>
+                </a>
+
+                <a class="wrapper" href="http://localhost:8080/daftarTopikDosen">
+                    <div class="innerRightContainer3">
+                        <img src="assets/images/listIcon.png" class="listIcon" alt="">
+                        <h3>Daftar Topik Skripsi</h3>
+                    </div>
+                </a>
+                
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+    <footer>
+        <%- include('./layout/footer.ejs') %>
+    </footer>
+</body>
+</html>
